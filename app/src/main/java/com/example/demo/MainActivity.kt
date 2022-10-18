@@ -35,6 +35,8 @@ class MainActivity : AppCompatActivity() {
         replaceFragment(HomeFragment())
     }
 
+    // Replacing the main activity page with fragment to be used further
+
     private fun replaceFragment(homeFragment: Fragment) {
 
         val fragmentManager=supportFragmentManager

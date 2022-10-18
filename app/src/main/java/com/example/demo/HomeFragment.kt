@@ -26,9 +26,6 @@ class HomeFragment : Fragment() {
     private lateinit var employeeList : ArrayList<Employee>
     private lateinit var employeeadapter : EmployeeAdapter
 
-    lateinit var imageId:Array<Int>
-    lateinit var textId1:Array<String>
-    lateinit var textId2:Array<String>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -94,7 +91,7 @@ class HomeFragment : Fragment() {
     }
 
 
-
+    // Creating a method to pass the array values
     private fun dataSetter() {
 
         employeeList=ArrayList()

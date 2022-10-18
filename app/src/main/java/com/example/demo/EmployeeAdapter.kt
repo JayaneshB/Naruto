@@ -20,11 +20,15 @@ class EmployeeAdapter(private val EmployeeList:ArrayList<Employee>) :
         val textView02: TextView=itemView.findViewById(R.id.surname)
     }
 
+    // Creating a view holder to have hold the user input
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EmployeeViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.card_view_layout,parent,false)
         Log.d(tagName,"created")
         return EmployeeViewHolder(view)
     }
+
+    // binding the value of the array with the view group in the fragment
 
     override fun onBindViewHolder(holder: EmployeeViewHolder, position: Int) {
 
