@@ -2,6 +2,7 @@
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="100dp"
     android:layout_marginLeft="13dp"
@@ -23,10 +24,11 @@
             android:layout_gravity="left"
             android:layout_margin="10dp"
             android:contentDescription="@string/app_name"
-            android:src="@drawable/naruto" />
+            android:src="@drawable/naruto"
+            tools:ignore="RtlHardcoded" />
 
         <LinearLayout
-            android:layout_width="225dp"
+            android:layout_width="0dp"
             android:layout_height="105dp"
             android:layout_gravity="center"
             android:layout_weight="0.5"
@@ -37,9 +39,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:layout_toRightOf="@id/name"
                 android:fontFamily="sans-serif"
-                android:text="Naruto"
+                android:text="@string/name"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -49,9 +50,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:layout_toRightOf="@id/surname"
                 android:fontFamily="sans-serif"
-                android:text="Uzumaki"
+                android:text="@string/surname"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
