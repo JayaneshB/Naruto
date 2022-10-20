@@ -10,7 +10,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        /*
+        /** Using activity without using fragments
+         *
+         *
+         *
         recyclerView=findViewById(R.id.recyclerView)
         recyclerView.setHasFixedSize(true)
         recyclerView.layoutManager=LinearLayoutManager(this)
