@@ -8,11 +8,17 @@
 
     <!-- TODO: Update blank fragment layout -->
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/hidden_leaf_village"/>
+
     <TextView
+        android:id="@+id/text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
         android:text="@string/mesage"
+        android:layout_marginTop="20dp"
         android:textStyle="italic"
         android:textColor="@color/black"
         android:textAlignment="center"

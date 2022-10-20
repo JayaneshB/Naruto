@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 
@@ -45,12 +46,10 @@ class EmployeeAdapter(private val EmployeeList:ArrayList<Employee>) :
             override fun onClick(v: View?) {
                 val activity=v!!.context as AppCompatActivity
                 val fragment=Fragment()
-
                 activity.supportFragmentManager.beginTransaction().replace(R.id.frame_layout,fragment).addToBackStack(null).commit()
+//                Toast.makeText(this,"Arigato Gosaimas",Toast.LENGTH_SHORT).show()
             }
         })
-
-
     }
 
     override fun getItemCount(): Int {
