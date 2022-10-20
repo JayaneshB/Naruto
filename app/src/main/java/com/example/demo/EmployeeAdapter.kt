@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 
 class EmployeeAdapter(private val EmployeeList:ArrayList<Employee>) :
@@ -38,6 +39,16 @@ class EmployeeAdapter(private val EmployeeList:ArrayList<Employee>) :
         holder.textView01.text = employee.name
         holder.textView02.text=employee.surname
         holder.imageView.setImageResource(employee.image)
+
+        holder.itemView.setOnClickListener(object:View.OnClickListener {
+
+            override fun onClick(v: View?) {
+                val activity=v!!.context as AppCompatActivity
+                val fragment=Fragment()
+
+                activity.supportFragmentManager.beginTransaction().replace(R.id.frame_layout,fragment).addToBackStack(null).commit()
+            }
+        })
 
 
     }
