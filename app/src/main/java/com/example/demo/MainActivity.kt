@@ -21,9 +21,11 @@ class MainActivity : AppCompatActivity(),EmployeeAdapter.Communicator {
     private fun replaceFragment(homeFragment: Fragment) {
 
         val fragmentTransaction=fragmentManager?.beginTransaction()
-        fragmentTransaction?.replace(R.id.frame_layout,homeFragment)
+        fragmentTransaction?.replace(R.id.frame_layout,homeFragment)?.addToBackStack("Description")
         fragmentTransaction?.commit()
     }
+    // the fragment will be added over the home fragment and it keeps changing
+
     private fun addFragment(fragment: Fragment) {
         val fragmentTransaction=fragmentManager?.beginTransaction()
         fragmentTransaction?.add( R.id.frame_layout,fragment)?.addToBackStack("description")
@@ -32,6 +34,14 @@ class MainActivity : AppCompatActivity(),EmployeeAdapter.Communicator {
 
     override fun onClick(employee: Employee) {
         Log.d("ONCLICK",employee.toString())
-        addFragment(DescriptionFragment.newInstance(employee.name,employee.surname,employee.image))
+
+        // the fragment will be entirely replaced with the new fragment
+        replaceFragment(DescriptionFragment.newInstance(employee.name,employee.surname,employee.image))
+
+        // the fragment will be added over the home fragment and it keeps changing
+
+//         addFragment(DescriptionFragment.newInstance(employee.name,employee.surname,employee.image))
+
+
     }
 }
