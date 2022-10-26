@@ -32,7 +32,7 @@ class HomeFragment : Fragment() {
         recyclerView.layoutManager= LinearLayoutManager(context)
         recyclerView.setHasFixedSize(true)
 
-        employeeadapter=EmployeeAdapter(employeeList)
+        employeeadapter=EmployeeAdapter(employeeList,activity as EmployeeAdapter.Communicator)
         recyclerView.adapter=employeeadapter
     }
 
@@ -52,10 +52,6 @@ class HomeFragment : Fragment() {
         employeeList.add(Employee(R.drawable.lady_tsunade,"Tsunade","Lady"))
         employeeList.add(Employee(R.drawable.minato,"Minato","Uzumaki"))
         employeeList.add(Employee(R.drawable.uzumaki_kushina,"kushina","Uzumaki"))
-    }
-    private fun contentShown() {
-
-
     }
 
 }
